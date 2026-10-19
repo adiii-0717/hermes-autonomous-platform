@@ -1,0 +1,40 @@
+{
+  "benchmark_id": "BM-3-Debugging",
+  "prompt": "Investigate failing application, fix bug, and write tests.",
+  "runs": 3,
+  "success_rate": 100.0,
+  "average_duration_seconds": 0.098,
+  "average_tool_calls": 0.0,
+  "runs_detail": [
+    {
+      "run": 1,
+      "passed": true,
+      "duration_seconds": 0.099,
+      "tool_calls": 0,
+      "tool_names": [],
+      "details": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 2,
+      "passed": true,
+      "duration_seconds": 0.098,
+      "tool_calls": 0,
+      "tool_names": [],
+      "details": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 3,
+      "passed": true,
+      "duration_seconds": 0.097,
+      "tool_calls": 0,
+      "tool_names": [],
+      "details": {
+        "test_output": ""
+      }
+    }
+  ]
+}

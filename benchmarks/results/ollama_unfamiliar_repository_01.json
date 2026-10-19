@@ -1,0 +1,53 @@
+{
+  "benchmark": "ollama_unfamiliar_repository_01",
+  "model": {
+    "provider": "ollama",
+    "name": "llama3.2:latest",
+    "base_url": "http://localhost:11434/v1"
+  },
+  "runtime": {
+    "process_user_turn_called": true,
+    "aiagent_instantiated": true,
+    "deterministic_fallback_used": false
+  },
+  "agent": {
+    "iterations": 2,
+    "model_calls": 2,
+    "tool_calls": 4,
+    "duration_seconds": 66.6835
+  },
+  "repository": {
+    "files_before": 23,
+    "files_read": 23,
+    "files_created": 22,
+    "files_modified": 2,
+    "files_deleted": 0
+  },
+  "context": {
+    "relevant_files": 23,
+    "irrelevant_files": 0,
+    "context_efficiency": 1.0,
+    "bytes_read": 14500
+  },
+  "testing": {
+    "command": "python3 -m unittest discover -s tests",
+    "exit_code": 0,
+    "tests_collected": 5,
+    "tests_passed": 5,
+    "tests_failed": 0
+  },
+  "recovery": {
+    "errors": 0,
+    "recovery_attempts": 0,
+    "successful_recoveries": 0
+  },
+  "acceptance": {
+    "crud_verified": true,
+    "pagination_verified": true,
+    "persistence_verified": true,
+    "regression_verified": true,
+    "tests_verified": true,
+    "overall": true
+  },
+  "success": true
+}

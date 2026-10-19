@@ -1,0 +1,5 @@
+name: groq-provider
+kind: model-provider
+version: 1.0.0
+description: Groq — Ultra-fast LPU inference for open models
+author: Hermes Agent

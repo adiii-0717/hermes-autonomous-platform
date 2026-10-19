@@ -1,0 +1,16 @@
+{
+  "baseline_test_result": {
+    "success": true,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.048s\n\nOK\n",
+    "failure_classification": "NONE"
+  },
+  "final_test_result": {
+    "success": true,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.066s\n\nOK\n",
+    "failure_classification": "NONE"
+  }
+}

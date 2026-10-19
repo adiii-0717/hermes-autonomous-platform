@@ -1,0 +1,82 @@
+{
+  "investigation_timestamp": "2026-08-25T12:25:13+05:30",
+  "omniroute_compatible": true,
+  "endpoint": "http://localhost:20128/v1",
+  "openai_compatibility": {
+    "chat_completions_endpoint": "/v1/chat/completions",
+    "models_endpoint": "/v1/models",
+    "tool_calling_support": true,
+    "streaming_support": true
+  },
+  "recommended_free_oauth_models": [
+    {
+      "model_identifier": "qwen/qwen-2.5-coder-32b-instruct:free",
+      "upstream_provider": "OpenRouter / Groq / Together",
+      "context_window_tokens": 131072,
+      "satisfies_64k_context": true,
+      "native_tool_calling": true,
+      "authentication": "Bearer token via OpenRouter API key configured in OmniRoute",
+      "rate_limits": {
+        "requests_per_minute": 20,
+        "requests_per_day": 200,
+        "tokens_per_minute": 60000
+      }
+    },
+    {
+      "model_identifier": "google/gemini-2.0-flash-001",
+      "upstream_provider": "Google AI Studio / OAuth",
+      "context_window_tokens": 1048576,
+      "satisfies_64k_context": true,
+      "native_tool_calling": true,
+      "authentication": "Google AI Studio API Key or OAuth token in OmniRoute",
+      "rate_limits": {
+        "requests_per_minute": 15,
+        "requests_per_day": 1500,
+        "tokens_per_minute": 1000000
+      }
+    }
+  ],
+  "architectural_rules_compliance": {
+    "modifies_hermes_agent": false,
+    "modifies_tool_registry": false,
+    "modifies_workspace_guard": false,
+    "modifies_approval_controller": false,
+    "modifies_acceptance_logic": false,
+    "adds_benchmark_conditionals": false,
+    "weakens_tests": false,
+    "preserves_ollama_support": true,
+    "optional_provider_only": true,
+    "auto_installs_disabled": true
+  },
+  "hermes_core_modification_required": false,
+  "exact_configuration": {
+    "MODEL_PROVIDER": "openai",
+    "MODEL_NAME": "qwen/qwen-2.5-coder-32b-instruct:free",
+    "API_BASE_URL": "http://localhost:20128/v1",
+    "OPENAI_API_KEY": "omniroute-local-key"
+  },
+  "controlled_experiment_proposal": {
+    "control": {
+      "provider": "ollama",
+      "model": "llama3.2:latest",
+      "base_url": "http://localhost:11434/v1"
+    },
+    "experiment": {
+      "provider": "openai",
+      "model": "qwen/qwen-2.5-coder-32b-instruct:free",
+      "base_url": "http://localhost:20128/v1"
+    },
+    "controlled_variables": [
+      "same repository",
+      "same repository builder (unfamiliar_repo_builder.py)",
+      "same prompt",
+      "same Hermes AIAgent",
+      "same tool registry",
+      "same tools",
+      "same security layer (WorkspaceGuard & ApprovalController)",
+      "same iteration limits",
+      "same acceptance checker"
+    ]
+  },
+  "recommendation": "Proceed with controlled benchmark once OmniRoute service is launched locally by the user and provider API credentials are added to OmniRoute."
+}

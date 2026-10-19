@@ -1,0 +1,8 @@
+{
+  "commands": [
+    {
+      "command": "python3 -m unittest discover -s tests",
+      "exit_code": 0
+    }
+  ]
+}

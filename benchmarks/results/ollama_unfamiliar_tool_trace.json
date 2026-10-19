@@ -1,0 +1,20 @@
+{
+  "tool_calls": [
+    {
+      "name": "tool_search",
+      "arguments": "{\"query\":\"*add*pagination*API*books*\"}"
+    },
+    {
+      "name": "tool_describe",
+      "arguments": "{\"name\":\"analyze_ast\"}"
+    },
+    {
+      "name": "tool_describe",
+      "arguments": "{\"name\":\"execute_command\"}"
+    },
+    {
+      "name": "tool_call",
+      "arguments": "{\"name\":\"execute_command\",\"arguments\":{}}"
+    }
+  ]
+}

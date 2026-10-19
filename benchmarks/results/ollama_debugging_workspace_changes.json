@@ -1,0 +1,29 @@
+{
+  "hash_before": "8810109df413aeb805cab0a9ca78d40ff3d5e96cfd2bbd2ba2296f5158a57da5",
+  "hash_after": "c6a018528190b94af1d9c288d4dd3d6b9e577837b05d342ce91707de6610fa9d",
+  "files_created": [
+    "app/__pycache__/__init__.cpython-314.pyc",
+    "app/__pycache__/config.cpython-314.pyc",
+    "app/__pycache__/main.cpython-314.pyc",
+    "app/api/__pycache__/__init__.cpython-314.pyc",
+    "app/api/__pycache__/book_router.cpython-314.pyc",
+    "app/database/__pycache__/__init__.cpython-314.pyc",
+    "app/database/__pycache__/connection.cpython-314.pyc",
+    "app/database/__pycache__/init_db.cpython-314.pyc",
+    "app/models/__pycache__/__init__.cpython-314.pyc",
+    "app/models/__pycache__/book_model.cpython-314.pyc",
+    "app/schemas/__pycache__/__init__.cpython-314.pyc",
+    "app/schemas/__pycache__/book_schema.cpython-314.pyc",
+    "app/services/__pycache__/__init__.cpython-314.pyc",
+    "app/services/__pycache__/book_service.cpython-314.pyc",
+    "books.db",
+    "tests/__pycache__/test_api.cpython-314.pyc",
+    "tests/__pycache__/test_pagination.cpython-314.pyc",
+    "tests/__pycache__/test_pagination_regression.cpython-314.pyc",
+    "tests/test_pagination_regression.py"
+  ],
+  "files_modified": [
+    "app/services/book_service.py"
+  ],
+  "files_deleted": []
+}

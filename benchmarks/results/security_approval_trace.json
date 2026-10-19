@@ -1,0 +1,6 @@
+{
+  "approve_flow": "PASSED",
+  "deny_flow": "PASSED",
+  "replay_bypass_attempt": "BLOCKED",
+  "fake_id_bypass_attempt": "BLOCKED"
+}

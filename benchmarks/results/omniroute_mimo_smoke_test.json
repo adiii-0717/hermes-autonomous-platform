@@ -1,0 +1,72 @@
+{
+  "test_name": "omniroute_mimo_smoke_test",
+  "timestamp": "2026-08-25T15:50:16+05:30",
+  "status": "BLOCKED",
+  "model_config": {
+    "provider": "openai",
+    "model": "oc/mimo-v2.5-free",
+    "api_base_url": "http://localhost:20128/v1",
+    "api_key": {
+      "present": true
+    }
+  },
+  "credential_discovery": {
+    "openai_api_key_present": true,
+    "source": "environment_or_default_omniroute_local",
+    "value_redacted": true
+  },
+  "preflight_checks": {
+    "omniroute_reachable": {
+      "endpoint": "http://localhost:20128/v1/models",
+      "status_code": 200,
+      "passed": true
+    },
+    "model_available": {
+      "model_name": "oc/mimo-v2.5-free",
+      "present_in_models_list": true,
+      "passed": true
+    },
+    "credential_present": {
+      "present": true,
+      "passed": true
+    },
+    "minimal_chat_completion": {
+      "passed": false,
+      "http_status": 403,
+      "error_code": "insufficient_quota",
+      "error_type": "permission_error",
+      "error_message": "[403]: <!doctype html>"
+    },
+    "tool_calling_test": {
+      "passed": false,
+      "reason": "Blocked by minimal chat completion failure (HTTP 403 insufficient_quota)"
+    }
+  },
+  "execution_metrics": {
+    "process_user_turn_called": false,
+    "genuine_aiagent_instantiated": false,
+    "model_api_calls": 0,
+    "hermes_iterations": 0,
+    "hermes_tool_calls": 0,
+    "deterministic_fallback_used": false,
+    "files_created_or_modified": [],
+    "commands_executed": [],
+    "tests_executed": [],
+    "test_exit_code": null,
+    "total_execution_time_seconds": 0.0
+  },
+  "acceptance_checker_result": {
+    "passed": false,
+    "reason": "Integration smoke test blocked during pre-flight stage prior to workspace execution"
+  },
+  "architectural_guarantees_compliance": {
+    "modifies_hermes_agent": false,
+    "modifies_run_agent": false,
+    "modifies_tool_registry": false,
+    "modifies_workspace_guard": false,
+    "modifies_approval_controller": false,
+    "adds_model_specific_conditionals": false,
+    "uses_deterministic_fallback": false,
+    "uses_mocks": false
+  }
+}

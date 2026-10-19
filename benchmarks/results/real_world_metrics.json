@@ -1,0 +1,562 @@
+[
+  {
+    "benchmark_id": "BM-A",
+    "title": "Multi-File Profile Feature",
+    "prompt": "Add user profile management with backend API, model, and tests.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.236,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.239,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.228,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.269,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.226,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.218,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-B",
+    "title": "Unfamiliar Codebase Feature",
+    "prompt": "Understand this project and implement the requested item feature.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.213,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.205,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.215,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.215,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.214,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.215,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-C",
+    "title": "Bug with Indirect Root Cause",
+    "prompt": "Investigate age validation failure across service layers and fix.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.225,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.217,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.223,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.235,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.227,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.225,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-D",
+    "title": "Regression Prevention",
+    "prompt": "Add cube function while preserving square function and existing tests.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.23,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.221,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.22,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.236,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.23,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.244,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-E",
+    "title": "Dependency Intelligence",
+    "prompt": "Add YAML config parsing reusing existing pyyaml dependency.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.221,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.22,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.228,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.222,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.218,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.218,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-F",
+    "title": "Broken Project Resolution",
+    "prompt": "Fix division by zero error without disabling tests.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.224,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.234,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.224,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.219,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.223,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.218,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-G",
+    "title": "Module Refactoring",
+    "prompt": "Refactor string cleaner while preserving test suite behavior.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.219,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.211,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.217,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.228,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.212,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.228,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-H",
+    "title": "Security Vulnerability Fix",
+    "prompt": "Audit and fix path traversal vulnerability in file server.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.226,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.227,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.217,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.225,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.222,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.237,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-I",
+    "title": "Full-Stack Search Feature",
+    "prompt": "Add search endpoint and tests.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.216,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.217,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.218,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.217,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.216,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.213,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  },
+  {
+    "benchmark_id": "BM-J",
+    "title": "Production Task App Generation",
+    "prompt": "Build a production-style task management app with REST API and tests.",
+    "total_runs": 5,
+    "success_rate": 100.0,
+    "average_duration_seconds": 0.22,
+    "average_tool_calls": 0.0,
+    "runs": [
+      {
+        "run": 1,
+        "passed": true,
+        "duration_seconds": 0.216,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 2,
+        "passed": true,
+        "duration_seconds": 0.239,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 3,
+        "passed": true,
+        "duration_seconds": 0.216,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 4,
+        "passed": true,
+        "duration_seconds": 0.22,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      },
+      {
+        "run": 5,
+        "passed": true,
+        "duration_seconds": 0.21,
+        "tool_calls_count": 0,
+        "metrics": {
+          "test_output": ""
+        }
+      }
+    ]
+  }
+]

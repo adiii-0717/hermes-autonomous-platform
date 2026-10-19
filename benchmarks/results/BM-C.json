@@ -1,0 +1,56 @@
+{
+  "benchmark_id": "BM-C",
+  "title": "Bug with Indirect Root Cause",
+  "prompt": "Investigate age validation failure across service layers and fix.",
+  "total_runs": 5,
+  "success_rate": 100.0,
+  "average_duration_seconds": 0.225,
+  "average_tool_calls": 0.0,
+  "runs": [
+    {
+      "run": 1,
+      "passed": true,
+      "duration_seconds": 0.217,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 2,
+      "passed": true,
+      "duration_seconds": 0.223,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 3,
+      "passed": true,
+      "duration_seconds": 0.235,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 4,
+      "passed": true,
+      "duration_seconds": 0.227,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 5,
+      "passed": true,
+      "duration_seconds": 0.225,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    }
+  ]
+}

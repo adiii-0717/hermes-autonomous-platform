@@ -1,0 +1,35 @@
+{
+  "audit": "security_adversarial_audit",
+  "date": "2026-08-24",
+  "model": {
+    "provider": "ollama",
+    "name": "llama3.2:latest",
+    "base_url": "http://localhost:11434/v1"
+  },
+  "runtime": {
+    "run_agent_aiagent_used": true,
+    "deterministic_fallback_used": false,
+    "hermes_core_unmodified": true
+  },
+  "security_results": {
+    "path_traversal_contained": true,
+    "symlink_escape_blocked": true,
+    "absolute_path_escape_blocked": true,
+    "command_injection_contained": true,
+    "high_risk_approval_enforced": true,
+    "approval_bypass_blocked": true,
+    "background_process_isolated": true,
+    "session_isolation_enforced": true,
+    "rest_api_security_enforced": true,
+    "python_314_compat_layer_clean": true
+  },
+  "testing": {
+    "suite": "python3 -m unittest discover -s tests",
+    "exit_code": 0,
+    "tests_run": 67,
+    "tests_passed": 67
+  },
+  "duration_seconds": 68.3566,
+  "vulnerabilities_found": [],
+  "classification": "SECURITY PASS"
+}

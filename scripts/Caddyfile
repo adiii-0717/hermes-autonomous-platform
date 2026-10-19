@@ -1,0 +1,25 @@
+# Hermes Dev Studio — Caddy Production Configuration
+hermesdevstudio.com {
+    tls admin@hermesdevstudio.com
+
+    header {
+        X-Frame-Options "SAMEORIGIN"
+        X-Content-Type-Options "nosniff"
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # WebSocket Proxying
+    @websockets {
+        header Connection *Upgrade*
+        header Upgrade    websocket
+    }
+    reverse_proxy @websockets localhost:8000
+
+    # API Proxying
+    reverse_proxy /api/* localhost:8000
+
+    # Static Frontend
+    root * /var/www/hermes/client/dist
+    file_server
+}

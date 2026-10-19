@@ -1,0 +1,73 @@
+{
+  "test_name": "ollama_qwen35_smoke_test",
+  "timestamp": "2026-08-25T16:26:27+05:30",
+  "status": "BLOCKED",
+  "model_config": {
+    "provider": "ollama",
+    "model": "qwen3.5:4b",
+    "api_base_url": "http://localhost:11434/v1",
+    "api_key": "ollama"
+  },
+  "preflight_checks": {
+    "ollama_reachable": {
+      "endpoint": "http://localhost:11434/v1/models",
+      "status_code": 200,
+      "passed": true
+    },
+    "model_installed": {
+      "model_name": "qwen3.5:4b",
+      "model_id": "2a654d98e6fb",
+      "present_in_registry": true,
+      "passed": true
+    },
+    "openai_endpoint_works": {
+      "endpoint": "http://localhost:11434/v1/chat/completions",
+      "accepts_post": true,
+      "passed": true
+    },
+    "minimal_chat_completion": {
+      "passed": false,
+      "timeout_seconds": 60,
+      "error": "TimeoutError: Request timed out after 60.03 seconds during generation"
+    },
+    "response_verification": {
+      "passed": false,
+      "reason": "Blocked by chat completion timeout"
+    },
+    "tool_calling_test": {
+      "passed": false,
+      "reason": "Blocked by chat completion timeout"
+    }
+  },
+  "execution_metrics": {
+    "process_user_turn_called": false,
+    "run_agent_aiagent_instantiated": false,
+    "provider": "ollama",
+    "model": "qwen3.5:4b",
+    "api_base_url": "http://localhost:11434/v1",
+    "model_call_count": 0,
+    "hermes_iterations": 0,
+    "hermes_tool_calls": [],
+    "files_created": [],
+    "files_modified": [],
+    "commands_executed": [],
+    "test_command": null,
+    "test_exit_code": null,
+    "total_execution_time_seconds": 0.0,
+    "used_deterministic_fallback": false
+  },
+  "acceptance_checker_result": {
+    "passed": false,
+    "reason": "Smoke test stopped at pre-flight verification prior to workspace execution"
+  },
+  "architectural_guarantees_compliance": {
+    "modifies_hermes_agent": false,
+    "modifies_run_agent": false,
+    "modifies_tool_registry": false,
+    "modifies_workspace_guard": false,
+    "modifies_approval_controller": false,
+    "uses_deterministic_fallback": false,
+    "uses_mocks": false,
+    "uses_external_apis": false
+  }
+}

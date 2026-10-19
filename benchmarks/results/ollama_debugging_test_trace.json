@@ -1,0 +1,16 @@
+{
+  "baseline_test_result": {
+    "success": false,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": ".F\n======================================================================\nFAIL: test_page_one_returns_first_item (test_pagination.TestBookPagination.test_page_one_returns_first_item)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmpfp0ku6m9/tests/test_pagination.py\", line 20, in test_page_one_returns_first_item\n    self.assertEqual(items[0][\"title\"], \"Book 0\")\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'Book 5' != 'Book 0'\n- Book 5\n?      ^\n+ Book 0\n?      ^\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.043s\n\nFAILED (failures=1)\n",
+    "failure_classification": "TEST_ERROR"
+  },
+  "final_test_result": {
+    "success": true,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.050s\n\nOK\n",
+    "failure_classification": "NONE"
+  }
+}

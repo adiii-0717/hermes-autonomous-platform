@@ -1,0 +1,11 @@
+{
+  "command_count": 1,
+  "commands": [
+    {
+      "command": "python3 -W ignore -m unittest test_main.py",
+      "exit_code": 1,
+      "stdout_size": 0,
+      "stderr_size": 645
+    }
+  ]
+}

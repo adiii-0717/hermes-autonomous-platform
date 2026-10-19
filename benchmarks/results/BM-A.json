@@ -1,0 +1,56 @@
+{
+  "benchmark_id": "BM-A",
+  "title": "Multi-File Profile Feature",
+  "prompt": "Add user profile management with backend API, model, and tests.",
+  "total_runs": 5,
+  "success_rate": 100.0,
+  "average_duration_seconds": 0.236,
+  "average_tool_calls": 0.0,
+  "runs": [
+    {
+      "run": 1,
+      "passed": true,
+      "duration_seconds": 0.239,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 2,
+      "passed": true,
+      "duration_seconds": 0.228,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 3,
+      "passed": true,
+      "duration_seconds": 0.269,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 4,
+      "passed": true,
+      "duration_seconds": 0.226,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 5,
+      "passed": true,
+      "duration_seconds": 0.218,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "workspace_guard_realpath_enforcement": "ACTIVE",
+  "symlink_escape_protection": "ACTIVE",
+  "cross_session_isolation": "ACTIVE"
+}

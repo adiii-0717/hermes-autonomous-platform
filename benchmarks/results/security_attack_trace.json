@@ -1,0 +1,84 @@
+{
+  "path_traversal_payloads": [
+    {
+      "payload": "../secret_outside.txt",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path '../secret_outside.txt' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/secret_outside.txt') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path '../secret_outside.txt' (resolving to '",
+      "escaped": false
+    },
+    {
+      "payload": "../../secret_outside.txt",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path '../../secret_outside.txt' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/secret_outside.txt') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path '../../secret_outside.txt' (resolving t",
+      "escaped": false
+    },
+    {
+      "payload": "../../../etc/passwd",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path '../../../etc/passwd' (resolving to '/private/var/folders/v4/etc/passwd') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path '../../../etc/passwd' (resolving to '/p",
+      "escaped": false
+    },
+    {
+      "payload": "/etc/passwd",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path '/etc/passwd' (resolving to '/private/etc/passwd') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path '/etc/passwd' (resolving to '/private/e",
+      "escaped": false
+    },
+    {
+      "payload": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp905okct3/secret_outside.txt",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp905okct3/secret_outside.txt' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp905okct3/secret_outside.txt') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path '/private/var/folders/v4/fwx2tvrs6dg1jf",
+      "escaped": false
+    },
+    {
+      "payload": "app/../../secret_outside.txt",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path 'app/../../secret_outside.txt' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/secret_outside.txt') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path 'app/../../secret_outside.txt' (resolvi",
+      "escaped": false
+    },
+    {
+      "payload": "app/./../../secret_outside.txt",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path 'app/./../../secret_outside.txt' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/secret_outside.txt') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path 'app/./../../secret_outside.txt' (resol",
+      "escaped": false
+    },
+    {
+      "payload": "..%2Fsecret_outside.txt",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path '..%2Fsecret_outside.txt' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/secret_outside.txt') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path '..%2Fsecret_outside.txt' (resolving to",
+      "escaped": false
+    },
+    {
+      "payload": "....//....//secret_outside.txt",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path '....//....//secret_outside.txt' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/secret_outside.txt') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path '....//....//secret_outside.txt' (resol",
+      "escaped": false
+    },
+    {
+      "payload": "app/../../../etc/shadow",
+      "valid": false,
+      "resolved": "/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa",
+      "err": "Security Boundary Violation: Path 'app/../../../etc/shadow' (resolving to '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/etc/shadow') escapes workspace '/private/var/folders/v4/fwx2tvrs6dg1jfz3h8zltvjm0000gn/T/tmp8jodl1xa'",
+      "read_res_snippet": "Error: Security Boundary Violation: Path 'app/../../../etc/shadow' (resolving to",
+      "escaped": false
+    }
+  ]
+}

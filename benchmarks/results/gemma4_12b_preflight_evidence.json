@@ -1,0 +1,52 @@
+{
+  "verifications": {
+    "ollama_running": true,
+    "gemma_model_found": true,
+    "available_models": [
+      "gemma4:12b",
+      "qwen3.5:4b",
+      "qwen2.5:3b"
+    ],
+    "basic_chat_success": false,
+    "basic_chat_error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=10)",
+    "tool_calling_success": true,
+    "tool_call_name": "calculate_square",
+    "tool_call_arguments_raw": "{\"num\":7}",
+    "tool_args_parsed": {
+      "num": 7
+    },
+    "tool_args_valid": true,
+    "write_file_error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=15)",
+    "recovery_success": false,
+    "recovery_error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=15)"
+  },
+  "smoke_test": {
+    "process_user_turn_called": true,
+    "aiagent_instantiated": true,
+    "model_provider": "ollama",
+    "model_name": "gemma4:12b",
+    "api_base_url": "http://localhost:11434/v1",
+    "total_execution_time": 616.3668,
+    "number_of_model_calls": 8,
+    "tool_calls": [],
+    "files_created_on_disk": [
+      "hello.py",
+      "test_hello.py",
+      ".project_manifest.json"
+    ],
+    "test_passes": false,
+    "test_suite_exit_code": 5,
+    "test_suite_stdout": "",
+    "test_suite_stderr": "\n----------------------------------------------------------------------\nRan 0 tests in 0.000s\n\nNO TESTS RAN\n",
+    "fallback_called": false,
+    "deterministic_fallback_used": false,
+    "exception_caught": null,
+    "agent_response": null,
+    "tool_errors_encountered": 0,
+    "recovered_from_tool_errors": "N/A"
+  },
+  "failure_analysis": {
+    "classification": "A",
+    "reason": "Model failed to write a correct greet function or test that actually passes."
+  }
+}

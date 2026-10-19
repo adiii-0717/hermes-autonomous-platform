@@ -1,0 +1,56 @@
+{
+  "benchmark_id": "BM-F",
+  "title": "Broken Project Resolution",
+  "prompt": "Fix division by zero error without disabling tests.",
+  "total_runs": 5,
+  "success_rate": 100.0,
+  "average_duration_seconds": 0.224,
+  "average_tool_calls": 0.0,
+  "runs": [
+    {
+      "run": 1,
+      "passed": true,
+      "duration_seconds": 0.234,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 2,
+      "passed": true,
+      "duration_seconds": 0.224,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 3,
+      "passed": true,
+      "duration_seconds": 0.219,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 4,
+      "passed": true,
+      "duration_seconds": 0.223,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    },
+    {
+      "run": 5,
+      "passed": true,
+      "duration_seconds": 0.218,
+      "tool_calls_count": 0,
+      "metrics": {
+        "test_output": ""
+      }
+    }
+  ]
+}

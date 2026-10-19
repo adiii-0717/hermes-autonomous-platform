@@ -1,0 +1,48 @@
+{
+  "benchmark": "ui_e2e_product_flow",
+  "date": "2026-08-24",
+  "model": {
+    "provider": "ollama",
+    "name": "llama3.2:latest",
+    "base_url": "http://localhost:11434/v1"
+  },
+  "runtime": {
+    "fastapi_backend_started": true,
+    "frontend_ui_served": true,
+    "ollama_reachable": true,
+    "websocket_connected": true,
+    "run_agent_aiagent_instantiated": true,
+    "deterministic_fallback_used": false
+  },
+  "session": {
+    "session_id": "session_58_4eca8e04",
+    "survived_restart": true
+  },
+  "websocket_events": {
+    "total_events": 4,
+    "event_types": [
+      "session_started",
+      "session_started",
+      "assistant_message",
+      "agent_finished"
+    ]
+  },
+  "tool_activity": {
+    "observed_tool_calls_count": 0,
+    "observed_tools": []
+  },
+  "workspace_operations": {
+    "files_modified": [
+      "app/utils/validators.py"
+    ],
+    "file_edit_save_verified": true,
+    "diff_review_verified": true
+  },
+  "approvals": {
+    "approve_flow_verified": true,
+    "deny_flow_verified": true
+  },
+  "duration_seconds": 62.8727,
+  "success": true,
+  "classification": "PRODUCTION CANDIDATE"
+}

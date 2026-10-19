@@ -1,0 +1,4 @@
+{
+  "background_process_isolation": "ACTIVE",
+  "process_lifecycle_tracking": "ACTIVE"
+}

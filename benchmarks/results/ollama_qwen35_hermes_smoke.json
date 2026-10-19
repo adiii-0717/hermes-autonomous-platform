@@ -1,0 +1,88 @@
+{
+  "test_name": "ollama_qwen35_hermes_smoke",
+  "timestamp": "2026-08-25T16:48:40+05:30",
+  "status": "FAIL",
+  "model_config": {
+    "provider": "ollama",
+    "model": "qwen3.5:4b",
+    "api_base": "http://localhost:11434/v1",
+    "api_key": "ollama"
+  },
+  "instrumentation": {
+    "process_user_turn_called": true,
+    "run_agent_aiagent_instantiated": true,
+    "provider": "ollama",
+    "model": "qwen3.5:4b",
+    "api_base": "http://localhost:11434/v1",
+    "used_deterministic_fallback": false,
+    "total_execution_time_seconds": 264.32,
+    "tool_call_count": 6,
+    "tool_names": [
+      "write_file",
+      "read_file",
+      "write_file",
+      "tool_describe",
+      "write_file",
+      "tool_search"
+    ],
+    "tool_calls": [
+      {
+        "tool": "write_file",
+        "args": {
+          "file_path": "./greeting.py",
+          "content": "def greet(name):\n    return f'Hello, {name}!'"
+        },
+        "error": "TypeError: DevFileTools.write_file() got an unexpected keyword argument 'file_path'"
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "file_path": "./greeting.py"
+        },
+        "error": "TypeError: DevFileTools.read_file() got an unexpected keyword argument 'file_path'"
+      },
+      {
+        "tool": "write_file",
+        "args": {},
+        "error": "TypeError: DevFileTools.write_file() got an unexpected keyword argument"
+      },
+      {
+        "tool": "tool_describe",
+        "args": {
+          "name": "write_file"
+        },
+        "output": "'write_file' is not a deferrable tool..."
+      },
+      {
+        "tool": "write_file",
+        "args": {},
+        "error": "TypeError: DevFileTools.write_file() got an unexpected keyword argument"
+      },
+      {
+        "tool": "tool_search",
+        "args": {
+          "query": "filesystem write create file text python test",
+          "limit": 5
+        },
+        "output": "21 matches found..."
+      }
+    ],
+    "finish_reason": "length",
+    "files_created": [
+      ".project_manifest.json"
+    ],
+    "caught_exception": null
+  },
+  "acceptance_check": {
+    "source_file_exists": false,
+    "test_file_exists": false,
+    "test_suite_passes": false,
+    "test_exit_code": null,
+    "test_output": "",
+    "overall_pass": false
+  },
+  "root_cause_analysis": {
+    "category": "MODEL_CAPABILITY_LIMITATION",
+    "details": "qwen3.5:4b made invalid tool calls by supplying parameter name 'file_path' instead of the required schema parameter 'path' for write_file and read_file. Upon receiving the tool error, the model attempted invalid parameter calls ({}) and meta-tool searches, eventually hitting max output tokens (finish_reason='length') without modifying workspace source or test files."
+  }
+}

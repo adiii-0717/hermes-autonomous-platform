@@ -1,0 +1,40 @@
+{
+  "hash_before": "b9c64f79e89fda0d37aec8b6edf3f5a3f0ffff871ce4689e0624715ba66ec9d2",
+  "hash_after": "785787c9c896d46e748897b7faa2df40726fb14381412d40e7e08ab21db01498",
+  "files_created": [
+    "app/__pycache__/__init__.cpython-314.pyc",
+    "app/__pycache__/config.cpython-314.pyc",
+    "app/__pycache__/main.cpython-314.pyc",
+    "app/api/__pycache__/__init__.cpython-314.pyc",
+    "app/api/__pycache__/auth.cpython-314.pyc",
+    "app/api/__pycache__/book_router.cpython-314.pyc",
+    "app/api/auth.py",
+    "app/database/__pycache__/__init__.cpython-314.pyc",
+    "app/database/__pycache__/connection.cpython-314.pyc",
+    "app/database/__pycache__/init_db.cpython-314.pyc",
+    "app/models/__pycache__/__init__.cpython-314.pyc",
+    "app/models/__pycache__/book_model.cpython-314.pyc",
+    "app/schemas/__pycache__/__init__.cpython-314.pyc",
+    "app/schemas/__pycache__/book_schema.cpython-314.pyc",
+    "app/services/__pycache__/__init__.cpython-314.pyc",
+    "app/services/__pycache__/book_service.cpython-314.pyc",
+    "app/utils/__pycache__/__init__.cpython-314.pyc",
+    "app/utils/__pycache__/validators.cpython-314.pyc",
+    "books.db",
+    "tests/__pycache__/test_api.cpython-314.pyc",
+    "tests/__pycache__/test_db.cpython-314.pyc",
+    "tests/__pycache__/test_library_system.cpython-314.pyc",
+    "tests/__pycache__/test_pagination.cpython-314.pyc",
+    "tests/__pycache__/test_service.cpython-314.pyc",
+    "tests/__pycache__/test_validators.cpython-314.pyc",
+    "tests/test_library_system.py"
+  ],
+  "files_modified": [
+    "app/database/init_db.py",
+    "app/models/book_model.py",
+    "app/schemas/book_schema.py",
+    "app/services/book_service.py",
+    "app/api/book_router.py"
+  ],
+  "files_deleted": []
+}

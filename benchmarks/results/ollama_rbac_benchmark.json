@@ -1,0 +1,47 @@
+{
+  "benchmark": "ollama_rbac_benchmark",
+  "model": {
+    "provider": "ollama",
+    "name": "llama3.2:latest",
+    "base_url": "http://localhost:11434/v1"
+  },
+  "runtime": {
+    "process_user_turn_called": true,
+    "aiagent_instantiated": true,
+    "deterministic_fallback_used": false
+  },
+  "agent": {
+    "iterations": 2,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "duration_seconds": 519.2901
+  },
+  "repository": {
+    "files_before": 23,
+    "files_read": 23,
+    "files_created": 26,
+    "files_modified": 2,
+    "files_deleted": 0
+  },
+  "testing": {
+    "command": "python3 -m unittest discover -s tests",
+    "exit_code": 0,
+    "tests_collected": 6,
+    "tests_passed": 6,
+    "tests_failed": 0
+  },
+  "acceptance": {
+    "normal_user_get_allowed": true,
+    "admin_post_allowed": true,
+    "admin_put_allowed": true,
+    "admin_delete_allowed": true,
+    "normal_user_post_forbidden_403": true,
+    "normal_user_put_forbidden_403": true,
+    "normal_user_delete_forbidden_403": true,
+    "default_no_role_treated_as_user": true,
+    "existing_crud_intact": true,
+    "tests_verified": true,
+    "overall": true
+  },
+  "success": true
+}

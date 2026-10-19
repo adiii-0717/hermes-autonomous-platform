@@ -1,0 +1,29 @@
+{
+  "verifications": {
+    "ollama_running": true,
+    "qwen_model_found": false,
+    "available_models": [
+      "gemma4:12b",
+      "qwen3.5:4b",
+      "qwen2.5:3b"
+    ],
+    "basic_chat_success": false,
+    "basic_chat_status": 404,
+    "tool_calling_success": false,
+    "tool_calling_status": 404,
+    "write_file_status": 404,
+    "recovery_success": false,
+    "recovery_error": "404 Client Error: Not Found for url: http://localhost:11434/v1/chat/completions"
+  },
+  "smoke_test": {
+    "error": "Ollama not running or qwen3.5:9b model missing",
+    "process_user_turn_called": false,
+    "aiagent_instantiated": false,
+    "fallback_called": false,
+    "deterministic_fallback_used": false
+  },
+  "failure_analysis": {
+    "classification": "C",
+    "reason": "Ollama service is either offline or the required qwen3.5:9b model is not pulled."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "experiment": "ollama_model_ab_comparison",
+  "date": "2026-08-24",
+  "control": {
+    "model_name": "llama3.2:latest",
+    "aiagent_instantiated": true,
+    "api_calls": 2,
+    "duration_seconds": 66.9762,
+    "extracted_tools_count": 1,
+    "extracted_tools": [
+      {
+        "name": "tool_search",
+        "arguments": "{\"query\":\"add pagination to books API preserve existing behavior and tests\"}"
+      }
+    ],
+    "tool_errors_count": 0,
+    "tool_errors": [],
+    "files_created": [
+      "app/__pycache__/__init__.cpython-314.pyc",
+      "app/__pycache__/config.cpython-314.pyc",
+      "app/__pycache__/main.cpython-314.pyc",
+      "app/api/__pycache__/__init__.cpython-314.pyc",
+      "app/api/__pycache__/book_router.cpython-314.pyc",
+      "app/database/__pycache__/__init__.cpython-314.pyc",
+      "app/database/__pycache__/connection.cpython-314.pyc",
+      "app/database/__pycache__/init_db.cpython-314.pyc",
+      "app/models/__pycache__/__init__.cpython-314.pyc",
+      "app/models/__pycache__/book_model.cpython-314.pyc",
+      "app/schemas/__pycache__/__init__.cpython-314.pyc",
+      "app/schemas/__pycache__/book_schema.cpython-314.pyc",
+      "app/services/__pycache__/__init__.cpython-314.pyc",
+      "app/services/__pycache__/book_service.cpython-314.pyc",
+      "app/utils/__pycache__/__init__.cpython-314.pyc",
+      "app/utils/__pycache__/validators.cpython-314.pyc",
+      "books.db",
+      "tests/__pycache__/test_api.cpython-314.pyc",
+      "tests/__pycache__/test_db.cpython-314.pyc",
+      "tests/__pycache__/test_pagination.cpython-314.pyc",
+      "tests/__pycache__/test_service.cpython-314.pyc",
+      "tests/__pycache__/test_validators.cpython-314.pyc"
+    ],
+    "files_created_count": 22,
+    "final_test_exit_code": 0,
+    "acceptance_crud": true,
+    "acceptance_pagination": true,
+    "acceptance_persistence": true,
+    "acceptance_overall": true,
+    "finish_reason": "text_response(finish_reason=stop)",
+    "caught_exception": null,
+    "success": true
+  },
+  "experiment_model": {
+    "model_name": "qwen2.5:3b",
+    "aiagent_instantiated": true,
+    "api_calls": 0,
+    "duration_seconds": 1.9635,
+    "extracted_tools_count": 0,
+    "extracted_tools": [],
+    "tool_errors_count": 0,
+    "tool_errors": [],
+    "files_created": [
+      "app/__pycache__/__init__.cpython-314.pyc",
+      "app/__pycache__/config.cpython-314.pyc",
+      "app/__pycache__/main.cpython-314.pyc",
+      "app/api/__pycache__/__init__.cpython-314.pyc",
+      "app/api/__pycache__/book_router.cpython-314.pyc",
+      "app/database/__pycache__/__init__.cpython-314.pyc",
+      "app/database/__pycache__/connection.cpython-314.pyc",
+      "app/database/__pycache__/init_db.cpython-314.pyc",
+      "app/models/__pycache__/__init__.cpython-314.pyc",
+      "app/models/__pycache__/book_model.cpython-314.pyc",
+      "app/schemas/__pycache__/__init__.cpython-314.pyc",
+      "app/schemas/__pycache__/book_schema.cpython-314.pyc",
+      "app/services/__pycache__/__init__.cpython-314.pyc",
+      "app/services/__pycache__/book_service.cpython-314.pyc",
+      "app/utils/__pycache__/__init__.cpython-314.pyc",
+      "app/utils/__pycache__/validators.cpython-314.pyc",
+      "books.db",
+      "tests/__pycache__/test_api.cpython-314.pyc",
+      "tests/__pycache__/test_db.cpython-314.pyc",
+      "tests/__pycache__/test_pagination.cpython-314.pyc",
+      "tests/__pycache__/test_service.cpython-314.pyc",
+      "tests/__pycache__/test_validators.cpython-314.pyc"
+    ],
+    "files_created_count": 22,
+    "final_test_exit_code": 0,
+    "acceptance_crud": true,
+    "acceptance_pagination": true,
+    "acceptance_persistence": true,
+    "acceptance_overall": true,
+    "finish_reason": "exception",
+    "caught_exception": "ValueError: Model qwen2.5:3b has a context window of 32,768 tokens, which is below the minimum 64,000 required by Hermes Agent.  Choose a model with at least 64K context.  If your server reports a window smaller than the model's true window, set model.context_length in config.yaml to the real value (this must be at least 64K).",
+    "success": false
+  },
+  "classification": "BOTH",
+  "findings": {
+    "control_success": true,
+    "experiment_success": false,
+    "tool_calls_diff": {
+      "control": 1,
+      "experiment": 0
+    },
+    "files_created_diff": {
+      "control": 22,
+      "experiment": 22
+    }
+  }
+}

@@ -1,0 +1,5 @@
+name: apinex-provider
+kind: model-provider
+version: 1.0.0
+description: APInex — OpenAI-compatible unified gateway with free and high-capacity models
+author: Hermes Agent

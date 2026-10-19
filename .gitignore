@@ -1,0 +1,78 @@
+# ==============================================================================
+# HermesProject — Git Ignore Exclusions
+# ==============================================================================
+
+# Secrets and environment files
+.env
+.env.*
+.env.local
+!.env.example
+
+# Python runtime, bytecode, and caches
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Node and frontend build artifacts
+node_modules/
+**/node_modules/
+client/node_modules/
+dist/
+**/dist/
+client/dist/
+build/
+.parcel-cache/
+
+# Runtime session and temporary databases
+.sessions_db.json
+books.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs and debug artifacts
+*.log
+logs/
+workspace_server.log
+
+# Generated user workspaces and zip archives
+workspace/
+workspace.zip
+*.zip
+*.tar.gz
+*.tgz
+
+# Dynamic project manifests and visual QA screenshots
+.project_manifest.json
+.visual_qa/
+**/.visual_qa/
+
+# Upstream submodule backup
+hermes-agent/.git_upstream_backup/
+
+# Operating System and IDE files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Scratch and test debug artifacts
+test_fail.txt
+hello_ui_test*.py
+data/
+.coverage
+coverage/
+.pytest_cache/
+**/.pytest_cache/
+
