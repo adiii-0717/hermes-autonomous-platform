@@ -75,4 +75,6 @@ data/
 coverage/
 .pytest_cache/
 **/.pytest_cache/
+.pytest-cache/
+**/.pytest-cache/
 

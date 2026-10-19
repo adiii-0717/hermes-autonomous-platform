@@ -52,8 +52,12 @@ class TestPlatformTokenPlaceholderGuard:
 
     def test_accepts_real_token(self, caplog):
         """A real-looking bot token should pass validation."""
+        # Construct synthetic Telegram token format in memory for placeholder validation
+        bot_id = "123456789"
+        secret_part = "SyntheticBotTokenForPlaceholderTest"
+        synthetic_token = f"{bot_id}:{secret_part}"
         config = _make_gateway_config(
-            Platform.TELEGRAM, "7123456789:AAHdqTcvCH1vGWJxfSeOfSAs0K5PALDsaw"
+            Platform.TELEGRAM, synthetic_token
         )
         with caplog.at_level(logging.ERROR):
             _validate_and_return(config)

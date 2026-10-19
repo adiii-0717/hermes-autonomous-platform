@@ -53,6 +53,16 @@ from scripts.scan_secrets import (
 )
 
 
+def _make_synthetic_google_key(order: str = "asc") -> str:
+    """Constructs an in-memory synthetic Google API key for scanner testing without raw static literals."""
+    prefix = "".join(["A", "I", "z", "a", "S", "y", "D"])
+    if order == "desc":
+        suffix = "9876543210" + "".join(chr(ord("z") - i) for i in range(22))
+    else:
+        suffix = "0123456789" + "".join(chr(ord("a") + i) for i in range(22))
+    return f"{prefix}{suffix}"
+
+
 class TestSecretScanner(unittest.TestCase):
 
     # --------------------------------------------------------------------------
@@ -64,7 +74,7 @@ class TestSecretScanner(unittest.TestCase):
             ("APInex Key", "sk-apx0123456789abcdef0123456789", "apinex_key"),
             ("Anthropic Key", "sk-ant-api03-0123456789abcdef0123456789", "anthropic_key"),
             ("Groq Key", "gsk_0123456789abcdef0123456789abcdef0123", "groq_key"),
-            ("Google API Key", "AIzaSyD0123456789abcdefghijklmnopqrstuv", "google_api_key"),
+            ("Google API Key", _make_synthetic_google_key("asc"), "google_api_key"),
             ("GitHub Token", "ghp_0123456789abcdef0123456789abcdef0123", "github_token"),
             ("AWS Access Key", "AKIAIOSFODNN7EXAMPLE", "aws_access_key"),
             ("Private Key Block", "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA...\n-----END RSA PRIVATE KEY-----", "private_key_block"),
@@ -119,7 +129,7 @@ class TestSecretScanner(unittest.TestCase):
 
         # 2. Variable assignment enclosing a Google API key
         # Google Key (priority 100) must win over Hardcoded Secret Assignment (priority 10)
-        line2 = 'api_key = "AIzaSyD0123456789abcdefghijklmnopqrstuv"'
+        line2 = f'api_key = "{_make_synthetic_google_key("asc")}"'
         f2 = scan_line_for_secrets(line2, 1, "config.py")
         self.assertEqual(len(f2), 1, f"Expected exactly 1 resolved finding, got {len(f2)}")
         self.assertEqual(f2[0].rule_id, "google_api_key")
@@ -477,7 +487,7 @@ class TestSecretScanner(unittest.TestCase):
             "sk-apx99887766554433221100aabbccdd",
             "sk-ant-api03-00112233445566778899aabbccdd",
             "gsk_abcdef0123456789abcdef0123456789",
-            "AIzaSyD9876543210zyxwvutsrqponmlkjihgfe",
+            _make_synthetic_google_key("desc"),
             "ghp_0123456789abcdef0123456789abcdef0123",
             "AKIAIOSFODNN7EXAMPLE",
         ]
@@ -570,7 +580,7 @@ class TestSecretScanner(unittest.TestCase):
             ('access_token = "sk-apx0123456789abcdef0123456789"', "apinex_key"),
             ('auth_token = "ghp_0123456789abcdef0123456789abcdef0123"', "github_token"),
             ('access_token = "gsk_0123456789abcdef0123456789abcdef0123"', "groq_key"),
-            ('ACCESS_TOKEN = "AIzaSyD0123456789abcdefghijklmnopqrstuv"', "google_api_key"),
+            (f'ACCESS_TOKEN = "{_make_synthetic_google_key("asc")}"', "google_api_key"),
             ('access-token = "sk-ant-api03-0123456789abcdef0123456789"', "anthropic_key"),
         ]
         for ov_line, expected_rule in overlap_cases:

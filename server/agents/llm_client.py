@@ -137,6 +137,7 @@ class LLMClient:
             )
 
     def _load_env(self) -> Dict[str, str]:
+        env_dict: Dict[str, str] = {}
         env_candidates = [
             Path(os.getenv("HERMES_ENV_PATH", "")),
             Path(".env"),
